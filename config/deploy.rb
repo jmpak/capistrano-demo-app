@@ -14,6 +14,8 @@ role :db,  domain, :primary => true # This is where Rails migrations will run
 
 set :runner, user
 
+set :mongrel_servers, 3
+set :mongrel_port, 8000
 set :rails_env, 'production'
 
 task :setup_permissions do
