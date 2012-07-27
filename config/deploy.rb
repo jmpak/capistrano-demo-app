@@ -30,3 +30,5 @@ task :setup_permissions do
 end
 
 before "peepcode:create_shared_config", "setup_permissions"
+
+
