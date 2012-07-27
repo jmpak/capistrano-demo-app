@@ -14,13 +14,10 @@ role :db,  domain, :primary => true # This is where Rails migrations will run
 
 set :runner, user
 
-set :mongrel_servers, 3
-set :mongrel_port, 8000
 set :rails_env, 'production'
 
 task :setup_permissions do
   sudo "chown -R #{user}:#{user} #{deploy_to}"
 end
-
 
 before "peepcode:create_shared_config", "setup_permissions"
